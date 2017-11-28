@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Gradle : test-git : test-git1.0-1.0-SNAPSHOT.war">
+    <output-path>$PROJECT_DIR$/test-git1.0/build/libs</output-path>
+    <properties id="gradle-properties">
+      <options external-project-path="$PROJECT_DIR$/test-git1.0" />
+    </properties>
+    <root id="archive" name="test-git1.0-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="Gradle : test-git : test-git1.0-1.0-SNAPSHOT.war (exploded)" />
+    </root>
+  </artifact>
+</component>

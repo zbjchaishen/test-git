@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.apache.maven.shared:maven-shared-utils:3.2.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.maven.shared/maven-shared-utils/3.2.0/294c35ae8260be0660d4e4ba9e64402b84530b4e/maven-shared-utils-3.2.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.maven.shared/maven-shared-utils/3.2.0/188a4dd541a98a40c254ab1ced4e123fd8afa530/maven-shared-utils-3.2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

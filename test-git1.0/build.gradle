@@ -1,0 +1,94 @@
+group 'test-git'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'war'
+
+sourceCompatibility = 1.8
+
+repositories {
+    maven {
+        url "http://maven.aliyun.com/nexus/content/repositories/central/"
+    }
+    mavenCentral()
+}
+
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    // https://mvnrepository.com/artifact/org.powermock/powermock-module-junit4
+    testCompile group: 'org.powermock', name: 'powermock-module-junit4', version: '1.7.3'
+    testCompile group: 'org.easymock', name: 'easymock', version: '3.5.1'
+    testCompile group: 'org.mockito', name: 'mockito-all', version: '1.10.19'
+
+    compile group: 'com.google.guava', name: 'guava', version: '23.4-jre'
+    compile group: 'joda-time', name: 'joda-time', version: '2.9.9'
+    compile group: 'commons-io', name: 'commons-io', version: '2.4'
+    compile group: 'commons-collections', name: 'commons-collections', version: '3.2.2'
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.7'
+    compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.2'
+    // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.9.2'
+    // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.2'
+    // https://mvnrepository.com/artifact/org.codehaus.groovy/groovy-all
+    compile group: 'org.codehaus.groovy', name: 'groovy-all', version: '2.6.0-alpha-2'
+    // https://mvnrepository.com/artifact/org.scala-lang/scala-library
+    compile group: 'org.scala-lang', name: 'scala-library', version: '2.13.0-M2'
+    // https://mvnrepository.com/artifact/org.slf4j/slf4j-api
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
+    // https://mvnrepository.com/artifact/log4j/log4j
+    compile group: 'log4j', name: 'log4j', version: '1.2.17'
+    // https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-dependency-plugin
+    compile group: 'org.apache.maven.plugins', name: 'maven-dependency-plugin', version: '3.0.2'
+    // https://mvnrepository.com/artifact/org.apache.pdfbox/pdfbox
+    compile group: 'org.apache.pdfbox', name: 'pdfbox', version: '2.0.8'
+    // https://mvnrepository.com/artifact/net.sf.ehcache/ehcache
+    compile group: 'net.sf.ehcache', name: 'ehcache', version: '2.10.4'
+
+
+//    def spring_version = "3.0.5.RELEASE"
+    def spring_version = "4.3.12.RELEASE"
+    def spring = ["org.springframework:spring-core:$spring_version",
+                  "org.springframework:spring-expression:$spring_version",
+                  //bean inject
+                  "org.springframework:spring-beans:$spring_version",
+                  "org.springframework:spring-context:$spring_version",
+                  "org.springframework:spring-aop:$spring_version",
+                  "org.springframework:spring-tx:$spring_version",
+                  "org.springframework:spring-orm:$spring_version",
+                  "org.springframework:spring-web:$spring_version",
+//                  "org.springframework:spring-asm:$spring_version",
+                  "org.springframework:spring-jdbc:$spring_version",
+                  "org.springframework:spring-webmvc:$spring_version",
+                  "org.springframework:spring-test:$spring_version",
+                  "aopalliance:aopalliance:1.0"]
+    def jersey_version = "1.8"
+    def jersey = ["javax.ws.rs:jsr311-api:1.1.1",
+                  "com.sun.jersey:jersey-core:$jersey_version",
+                  "com.sun.jersey:jersey-server:$jersey_version",
+                  "com.sun.jersey.contribs:jersey-spring:$jersey_version",
+                  "com.sun.jersey:jersey-client:$jersey_version",
+                  //impliment javax servlet
+                  "javax.servlet:servlet-api:2.5"]
+    def ibatis_version = "3.0"
+    def ibatis =["org.apache.ibatis:ibatis-core:$ibatis_version"]
+    def mybatis_version ="2.3.5"
+    def mybatis =["org.mybatis:mybatis:$mybatis_version"]
+    def mysql_version = "5.1.13"
+    def mysql = ["mysql:mysql-connector-java:$mysql_version"]
+    // https://mvnrepository.com/artifact/commons-dbcp/commons-dbcp
+    def commons_dbcp = ["commons-dbcp:commons-dbcp:1.4"]
+
+    def aspectj_version = "1.6.2"
+    def aspectj = ["org.aspectj:aspectjweaver:$aspectj_version"]
+
+    //项目对象模型 pom
+    def gson_version = "2.3.1"
+    def gson = ["com.google.code.gson:gson:$gson_version"]
+    //    def apache_version = ""
+//    def apache = [""]
+    def apache_commons = ["org.apache.commons:commons-lang3:3.0"]
+    compile jersey,spring,ibatis,mysql,commons_dbcp,mybatis,aspectj,gson,apache_commons
+}
