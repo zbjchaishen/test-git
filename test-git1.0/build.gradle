@@ -10,7 +10,7 @@ repositories {
     maven {
         url "http://maven.aliyun.com/nexus/content/repositories/central/"
     }
-    mavenCentral()
+//    mavenCentral()
 }
 
 
@@ -18,34 +18,38 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
     testCompile group: 'junit', name: 'junit', version: '4.12'
     // https://mvnrepository.com/artifact/org.powermock/powermock-module-junit4
-    testCompile group: 'org.powermock', name: 'powermock-module-junit4', version: '1.7.3'
-    testCompile group: 'org.easymock', name: 'easymock', version: '3.5.1'
-    testCompile group: 'org.mockito', name: 'mockito-all', version: '1.10.19'
+//    testCompile group: 'org.powermock', name: 'powermock-module-junit4', version: '1.7.3'
+//    testCompile group: 'org.easymock', name: 'easymock', version: '3.5.1'
+//    testCompile group: 'org.mockito', name: 'mockito-all', version: '1.10.19'
 
     compile group: 'com.google.guava', name: 'guava', version: '23.4-jre'
     compile group: 'joda-time', name: 'joda-time', version: '2.9.9'
     compile group: 'commons-io', name: 'commons-io', version: '2.4'
     compile group: 'commons-collections', name: 'commons-collections', version: '3.2.2'
     compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.7'
-    compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.2'
+
+    // https://mvnrepository.com/artifact/commons-collections/commons-collections
+    compile group: 'commons-collections', name: 'commons-collections', version: '3.2.1'
+
+//    compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.2'
     // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core
     compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.9.2'
     // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
-    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.2'
+//    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.2'
     // https://mvnrepository.com/artifact/org.codehaus.groovy/groovy-all
-    compile group: 'org.codehaus.groovy', name: 'groovy-all', version: '2.6.0-alpha-2'
+//    compile group: 'org.codehaus.groovy', name: 'groovy-all', version: '2.6.0-alpha-2'
     // https://mvnrepository.com/artifact/org.scala-lang/scala-library
-    compile group: 'org.scala-lang', name: 'scala-library', version: '2.13.0-M2'
+//    compile group: 'org.scala-lang', name: 'scala-library', version: '2.13.0-M2'
     // https://mvnrepository.com/artifact/org.slf4j/slf4j-api
     compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
     // https://mvnrepository.com/artifact/log4j/log4j
     compile group: 'log4j', name: 'log4j', version: '1.2.17'
     // https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-dependency-plugin
-    compile group: 'org.apache.maven.plugins', name: 'maven-dependency-plugin', version: '3.0.2'
+//    compile group: 'org.apache.maven.plugins', name: 'maven-dependency-plugin', version: '3.0.2'
     // https://mvnrepository.com/artifact/org.apache.pdfbox/pdfbox
-    compile group: 'org.apache.pdfbox', name: 'pdfbox', version: '2.0.8'
+//    compile group: 'org.apache.pdfbox', name: 'pdfbox', version: '2.0.8'
     // https://mvnrepository.com/artifact/net.sf.ehcache/ehcache
-    compile group: 'net.sf.ehcache', name: 'ehcache', version: '2.10.4'
+//    compile group: 'net.sf.ehcache', name: 'ehcache', version: '2.10.4'
 
 
 //    def spring_version = "3.0.5.RELEASE"
